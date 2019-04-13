@@ -1,0 +1,2 @@
+- currency-exchange-service is used to provide exchange value for specific currency for an example 1 US $ = 65 rupees
+- this module is being used from currency-conversion-service
