@@ -109,6 +109,16 @@ You will learn
 | Netflix Zuul API Gateway Server | 8765 |
 | Zipkin Distributed Tracing Server | 9411 |
 
+## Rabbit MQ Installation
+Downloading rabbitmq exe for windows
+
+First download and install erlang 
+- http://www.erlang.org/downloads
+
+Now doanload and install rabbitmq
+- https://www.rabbitmq.com/install-windows.html
+
+
 ## Zipkin Installation
 
 Quick Start Page
