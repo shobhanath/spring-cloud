@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
@@ -15,7 +16,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.0.0.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
 	<properties>
@@ -26,26 +27,37 @@
 	</properties>
 
 	<dependencies>
+		<!-- Dependency for eureka-client used to register in naming server and 
+			get the service url from naming server -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
-
+		<!-- dependency for zuul api gateway -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-zuul</artifactId>
 		</dependency>
-
+		<!-- To assign space id, trace id (unique request id) for a each and every 
+			request For an example : application-name ,4e30f7340b3fb631,4e30f7340b3fb631,false] 
+			4e30f7340b3fb631 - trace id, 4e30f7340b3fb631 - span id, false - This property 
+			is a boolean that indicates whether or not this log was exported to an aggregator 
+			like Zipkin. -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-sleuth</artifactId>
 		</dependency>
-
+		<!-- Zipkin is very efficient tool for distributed tracing in microservices 
+			ecosystem -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-sleuth-zipkin</artifactId>
 		</dependency>
-
+		<!-- dependency for Spring Cloud Bus provides feature to refresh configurations 
+			across multiple instances, if you want to refresh config for all the config 
+			clients then instead of calling refresh endpoint for each and every config 
+			client separately we can call spring cloud bus refresh endpoint only once 
+			to refresh all the config clients -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-bus-amqp</artifactId>

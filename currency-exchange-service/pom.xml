@@ -32,22 +32,32 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
-		<!-- TODO -->
+		<!-- Dependency for eureka-client used to register in naming server and 
+			get the service url from naming server -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
-		<!-- TODO -->
+		<!-- To assign space id, trace id (unique request id) for a each and every 
+			request For an example : application-name ,4e30f7340b3fb631,4e30f7340b3fb631,false] 
+			4e30f7340b3fb631 - trace id, 4e30f7340b3fb631 - span id, false - This property 
+			is a boolean that indicates whether or not this log was exported to an aggregator 
+			like Zipkin. -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-sleuth</artifactId>
 		</dependency>
-		<!-- TODO -->
+		<!-- Zipkin is very efficient tool for distributed tracing in microservices 
+			ecosystem -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-sleuth-zipkin</artifactId>
 		</dependency>
-		<!-- TODO -->
+		<!-- dependency for Spring Cloud Bus provides feature to refresh configurations 
+			across multiple instances, if you want to refresh config for all the config 
+			clients then instead of calling refresh endpoint for each and every config 
+			client separately we can call spring cloud bus refresh endpoint only once 
+			to refresh all the config clients -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
