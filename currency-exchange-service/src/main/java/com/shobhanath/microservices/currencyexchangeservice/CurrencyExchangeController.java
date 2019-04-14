@@ -25,7 +25,7 @@ public class CurrencyExchangeController {
 		
 		ExchangeValue exchangeValue = 
 				repository.findByFromAndTo(from, to);
-		/*TODO:*/
+		/*here setting port just to monitor which server it is hitting in case of Ribbon client side load balancer*/
 		exchangeValue.setPort(
 				Integer.parseInt(environment.getProperty("local.server.port")));
 		

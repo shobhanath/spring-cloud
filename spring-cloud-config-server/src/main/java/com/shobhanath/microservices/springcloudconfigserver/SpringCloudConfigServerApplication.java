@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.config.server.EnableConfigServer;
 
-@EnableConfigServer //To enable spring cloud config server
+@EnableConfigServer //To enable spring cloud config server in order to externalize configs
 @SpringBootApplication
 public class SpringCloudConfigServerApplication {
 

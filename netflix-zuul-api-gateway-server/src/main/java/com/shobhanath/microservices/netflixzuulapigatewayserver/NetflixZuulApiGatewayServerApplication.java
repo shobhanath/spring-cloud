@@ -8,17 +8,23 @@ import org.springframework.context.annotation.Bean;
 
 import brave.sampler.Sampler;
 
-@EnableZuulProxy
-@EnableDiscoveryClient
+@EnableZuulProxy // To enable Zuul API gateway in order to intercepts all the request before
+					// hitting the actual micro services
+@EnableDiscoveryClient // To register this micro services in naming server
 @SpringBootApplication
 public class NetflixZuulApiGatewayServerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(NetflixZuulApiGatewayServerApplication.class, args);
 	}
-	
+
+	/**
+	 * we need to tell our application how often we want to sample our logs to be
+	 * exported to Zipkin. Since this is a demo, lets tell our app that we want to
+	 * sample everything. We can do this by creating a bean for the AlwaysSampler
+	 */
 	@Bean
-	public Sampler defaultSampler(){
+	public Sampler defaultSampler() {
 		return Sampler.ALWAYS_SAMPLE;
 	}
 }

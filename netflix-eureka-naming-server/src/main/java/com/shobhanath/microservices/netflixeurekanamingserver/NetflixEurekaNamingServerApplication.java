@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @SpringBootApplication
-@EnableEurekaServer
+@EnableEurekaServer //This annotation is used to enable or make this micro services as naming server
 public class NetflixEurekaNamingServerApplication {
 
 	public static void main(String[] args) {
