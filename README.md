@@ -97,6 +97,18 @@ You will learn
 | Zipkin | http://localhost:9411/zipkin/ |
 | Spring Cloud Bus Refresh | http://localhost:8080/bus/refresh |
 
+## Sequences to run application
+
+|     Application       |     Port          |
+| ------------- | ------------- |
+| Netflix Eureka Naming Server | 8761 |
+| Spring Cloud Config Server | 8888 |
+| Limits Service | 8080, 8081, ... |
+| Currency Exchange Service | 8000, 8001, 8002, ..  |
+| Currency Conversion Service | 8100, 8101, 8102, ... |
+| Netflix Zuul API Gateway Server | 8765 |
+| Zipkin Distributed Tracing Server | 9411 |
+
 ## Zipkin Installation
 
 Quick Start Page
