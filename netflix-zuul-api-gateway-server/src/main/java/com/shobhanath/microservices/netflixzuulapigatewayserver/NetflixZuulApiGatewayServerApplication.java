@@ -22,6 +22,8 @@ public class NetflixZuulApiGatewayServerApplication {
 	 * we need to tell our application how often we want to sample our logs to be
 	 * exported to Zipkin. Since this is a demo, lets tell our app that we want to
 	 * sample everything. We can do this by creating a bean for the AlwaysSampler
+	 * 
+	 * if you want to trace all the request
 	 */
 	@Bean
 	public Sampler defaultSampler() {
