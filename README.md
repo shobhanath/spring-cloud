@@ -115,7 +115,7 @@ Downloading rabbitmq exe for windows
 First download and install erlang 
 - http://www.erlang.org/downloads
 
-Now doanload and install rabbitmq
+2ndly now download and install rabbitmq
 - https://www.rabbitmq.com/install-windows.html
 
 ## Zipkin Installation
