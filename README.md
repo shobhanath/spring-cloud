@@ -97,7 +97,7 @@ You will learn
 | Zipkin | http://localhost:9411/zipkin/ |
 | Spring Cloud Bus Refresh | http://localhost:8080/bus/refresh |
 
-## Sequences to run application
+## Correct order to run application
 
 |     Application       |     Port          |
 | ------------- | ------------- |
