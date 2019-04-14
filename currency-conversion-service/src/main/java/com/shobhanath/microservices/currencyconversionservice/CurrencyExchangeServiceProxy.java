@@ -26,4 +26,6 @@ public interface CurrencyExchangeServiceProxy {
 	@GetMapping("/currency-exchange-service/currency-exchange/from/{from}/to/{to}")
 	public CurrencyConversionBean retrieveExchangeValue(@PathVariable("from") String from,
 			@PathVariable("to") String to);
+	
+	//here url is http://localhost:8765/currency-exchange-service/currency-exchange/from/{from}/to/{to} and not http://currency-exchange-service/currency-exchange/from/{from}/to/{to} and currency-exchange-service will be replaced with host and port available using naming server and ribbon
 }
