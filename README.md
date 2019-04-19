@@ -133,7 +133,10 @@ Downloading Zipkin Jar
 
 Command to run
 ```
-RABBIT_URI=amqp://localhost java -jar zipkin-server-2.5.2-exec.jar
+SET RABBIT_URI=amqp://localhost 
+
+java -jar zipkin-server-2.7.0-exec.jar
+
 ```
 
 ## VM Argument
