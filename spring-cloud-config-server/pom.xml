@@ -36,7 +36,7 @@
 			across multiple instances, if you want to refresh config for all the config 
 			clients then instead of calling refresh endpoint for each and every config 
 			client separately we can call spring cloud bus refresh endpoint only once 
-			to refresh all the config clients -->
+			to refresh all the config clients. By default cloud bus will refresh all the configs automatically  -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-bus-amqp</artifactId>

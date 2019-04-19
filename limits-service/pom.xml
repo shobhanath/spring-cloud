@@ -33,6 +33,13 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
+		
+		<!-- Dependency for eureka-client used to register in naming server and 
+			get the service url from naming server -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
 
 		<!-- dependency for hystrix circuit breaker, @HystrixCommand -->
 		<dependency>
