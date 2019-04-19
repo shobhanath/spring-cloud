@@ -69,20 +69,6 @@ You will learn
 - Fault Tolerance with Hystrix
 
 
-## Ports
-
-|     Application       |     Port          |
-| ------------- | ------------- |
-| Limits Service | 8080, 8081, ... |
-| Spring Cloud Config Server | 8888 |
-|  |  |
-| Currency Exchange Service | 8000, 8001, 8002, ..  |
-| Currency Conversion Service | 8100, 8101, 8102, ... |
-| Netflix Eureka Naming Server | 8761 |
-| Netflix Zuul API Gateway Server | 8765 |
-| Zipkin Distributed Tracing Server | 9411 |
-
-
 ## URLs
 
 |     Application       |     URL          |
@@ -101,13 +87,14 @@ You will learn
 
 |     Application       |     Port          |
 | ------------- | ------------- |
+| Zipkin Distributed Tracing Server | 9411 |
 | Netflix Eureka Naming Server | 8761 |
 | Spring Cloud Config Server | 8888 |
 | Limits Service | 8080, 8081, ... |
 | Currency Exchange Service | 8000, 8001, 8002, ..  |
 | Currency Conversion Service | 8100, 8101, 8102, ... |
 | Netflix Zuul API Gateway Server | 8765 |
-| Zipkin Distributed Tracing Server | 9411 |
+
 
 ## Rabbit MQ Installation
 Downloading rabbitmq exe for windows
