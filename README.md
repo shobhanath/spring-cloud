@@ -118,6 +118,11 @@ First download and install erlang
 2ndly now download and install rabbitmq
 - https://www.rabbitmq.com/install-windows.html
 
+3rdly you can login to rabbitmq using below username and password
+- http://localhost:15672
+
+default username and password is guest and guest
+
 ## Zipkin Installation
 
 Quick Start Page
