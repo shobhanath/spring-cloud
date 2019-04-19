@@ -147,6 +147,25 @@ spring.cloud.config.failFast=true
 
 ```
 
+## Question & Answers
+
+1. Different Ways to Refresh Properties ?
+
+Ans ==> A simple way to refresh configuration property is to use /refresh endpoint provided by spring boot actuator.But this is a manual process and need to be triggered for all the instances.Another way is with /bus-refresh with spring-cloud-bus and in this case all the instances subscribe to an event and whenever this event is triggered, all the config properties will be automatically refreshed via spring cloud bus broadcasting.
+
+2. Difference between trace id and span id ?
+
+Span: The basic unit of work. For example, sending an RPC is a new span, as is sending a response to an RPC. Spans are identified by a unique 64-bit ID for the span and another 64-bit ID for the trace the span is a part of. Spans also have other data, such as descriptions, timestamped events, key-value annotations (tags), the ID of the span that caused them, and process IDs (normally IP addresses).
+
+Spans can be started and stopped, and they keep track of their timing information. Once you create a span, you must stop it at some point in the future.
+
+For an example : application-name ,4e30f7340b3fb631,4e30f7340b3fb631,false] 
+4e30f7340b3fb631 - trace id, 
+4e30f7340b3fb631 - span id, 
+false - This property is a boolean that indicates whether or not this log was exported to an aggregator like Zipkin
+
+The initial span that starts a trace is called a root span. The value of the ID of that span is equal to the trace ID.
+
 ## More Reading about Microservices
 - Design and Governance of Microservices
     - https://martinfowler.com/microservices/
