@@ -87,7 +87,7 @@ You will learn
 
 |     Application       |     URL          |
 | ------------- | ------------- |
-| Limits Service | http://localhost:8080/limits POST -> http://localhost:8080/actuator/refresh|
+| Limits Service | http://localhost:8080/limits POST -> http://localhost:8080/actuator/refresh - It returns the updated properties |
 |Spring Cloud Config Server| http://localhost:8888/limits-service/default http://localhost:8888/limits-service/dev |
 |  Currency Converter Service - Direct Call| http://localhost:8100/currency-converter/from/USD/to/INR/quantity/10|
 |  Currency Converter Service - Feign| http://localhost:8100/currency-converter-feign/from/EUR/to/INR/quantity/10000|
@@ -95,7 +95,7 @@ You will learn
 | Eureka | http://localhost:8761/|
 | Zuul - Currency Exchange & Exchange Services | http://localhost:8765/currency-exchange-service/currency-exchange/from/EUR/to/INR http://localhost:8765/currency-conversion-service/currency-converter-feign/from/USD/to/INR/quantity/10|
 | Zipkin | http://localhost:9411/zipkin/ |
-| Spring Cloud Bus Refresh | http://localhost:8080/bus/refresh |
+| Spring Cloud Bus Refresh | POST http://localhost:8080/actuator/bus-refresh |
 
 ## Correct order to run application
 
@@ -115,9 +115,13 @@ Downloading rabbitmq exe for windows
 First download and install erlang 
 - http://www.erlang.org/downloads
 
-Now doanload and install rabbitmq
+2ndly now download and install rabbitmq
 - https://www.rabbitmq.com/install-windows.html
 
+3rdly you can login to rabbitmq using below username and password
+- http://localhost:15672
+
+default username and password is guest and guest
 
 ## Zipkin Installation
 
@@ -129,7 +133,10 @@ Downloading Zipkin Jar
 
 Command to run
 ```
-RABBIT_URI=amqp://localhost java -jar zipkin-server-2.5.2-exec.jar
+SET RABBIT_URI=amqp://localhost 
+
+java -jar zipkin-server-2.7.0-exec.jar
+
 ```
 
 ## VM Argument
